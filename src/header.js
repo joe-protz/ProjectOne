@@ -1,5 +1,6 @@
 const links = document.getElementsByTagName('a')
 const linkArr = [...links]
+
 const addEventListeners = () => {
   linkArr.forEach(link => link.addEventListener('click', () => {
     linkArr.forEach((anchor => {
