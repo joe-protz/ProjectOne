@@ -1,7 +1,8 @@
 const links = document.getElementsByTagName('a')
 const linkArr = [...links]
 
-const toggleSelectedLink = () => {
+const toggleSelectedLink = e => {
+  if (e.target.classList.contains('active')) return
   linkArr.forEach((anchor => {
     if (anchor.classList.contains('active')) {
       anchor.classList.remove('active')
@@ -10,6 +11,7 @@ const toggleSelectedLink = () => {
     }
   }))
 }
+
 const addEventListeners = () => {
   linkArr.forEach(link => link.addEventListener('click', toggleSelectedLink))
 }

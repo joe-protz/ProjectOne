@@ -1,11 +1,11 @@
 @import 'variables.scss';
 $box-height: 20rem;
-$box-gap:1rem;
+$box-gap: 1rem;
 
 .container {
   background-color: #eff1f5;
   // not sure why calc doesn't work with multiple variables.
-  min-height: calc(40rem + 1rem + 6rem );
+  min-height: calc(40rem + 1rem + 6rem);
   padding: $container-padding;
   display: grid;
   grid-template-columns: repeat(3, minmax(200px, 1fr));
@@ -21,65 +21,74 @@ $box-gap:1rem;
 .box {
   height: $box-height;
   text-align: center;
-  transition: transform 0.2s;
+  transition: transform ease-in 0.3s, box-shadow 1s;;
   text-transform: uppercase;
   background-color: white;
   min-height: 200px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  box-shadow: 
-    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
     0 6.7px 5.3px rgba(0, 0, 0, 0.048);
 
   .header {
-    padding:5px;
+    transition: color ease-in 0.5s;
+    padding: 5px;
     color: $box-text;
     font-size: 1.5rem;
   }
 
   .sub {
-    padding:5px;
+    transition: color ease-in 0.5s;
+    padding: 5px;
     color: $primary;
   }
 
-  .hidden {
-    display: none;
-    color:white;
+  .transition-in {
+    position: fixed;
+    transition: opacity 0.6s ease-in,visibility 0s, transform 0.5s;
+    opacity: 0;
+    visibility: hidden;
+    color: white;
     background-color: $primary;
   }
 
   &:hover {
     transform: translateY(-5px);
-    justify-content: space-around;
-    flex-direction: column;
-
     cursor: pointer;
     border-top: 2px solid #d83a6a;
     box-shadow: 
-      0 2.8px 2.2px rgba(0, 0, 0, 0.034),
-      0 6.7px 5.3px rgba(0, 0, 0, 0.048),
-      0 12.5px 10px rgba(0, 0, 0, 0.06),
-      0 22.3px 17.9px rgba(0, 0, 0, 0.072), 
-      0 41.8px 33.4px rgba(0, 0, 0, 0.086),
-      0 100px 80px rgba(0, 0, 0, 0.12);
+    0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048),
+    0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
 
-    .hidden {
-      display: block;
+    .transition-in {
+      position: initial;
+      transform: translateY(2.5rem);
+
+      opacity: 1;
+      visibility: visible;
       padding: 0.75rem;
       text-align: center;
       width: 80%;
     }
-    .header{
-      color:$secondary;
-
+    .main-box-content{
+      transition: transform linear 0.3s;
+      transform: translateY(-2.5rem);
     }
-    .sub{
-      color:#1d314c;
+    .header {
+      color: $secondary;
+    }
+    .sub {
+      color: #1d314c;
     }
   }
 }
 
-.hidden{
-  display:none;
+.hidden {
+  display: none;
 }
