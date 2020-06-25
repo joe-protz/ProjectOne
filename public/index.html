@@ -1,13 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Project One</title>
-</head>
-<body>
-  <header>Hello world</header>
+  <head>
+    <!-- Header fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Roboto+Slab:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Project One</title>
+  </head>
+  <body>
+    <!-- Begin header -->
+    <header>
+      <div class="header-container">
+        <nav>
+          <div>
+            <span class="logo-1">Logo</span><span class="logo-2">Design</span>
+          </div>
 
-  <script src="../src/index.js"></script>
-</body>
+          <div class="links">
+            <a href="#" class="active">Home</a>
+            <a href="#">Away</a>
+          </div>
+        </nav>
+        <div class="header-text-container text-center">
+          <h1>Why Hello There</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est dolore
+            placeat cum nulla beatae sed laborum molestias quam eveniet saepe,
+            ut suscipit officia debitis ullam incidunt, magnam molestiae magni
+            assumenda.
+          </p>
+        </div>
+      </div>
+    </header>
+    <!-- End header -->
+
+    <!-- Middle selector -->
+    <div class="selector">
+      <button id="all" class="toggle selected">Show all</button>
+      <button id="even" class="toggle">Show even</button>
+      <button id="odd" class="toggle">Show odd</button>
+    </div>
+    <!-- end middle selector -->
+    <!-- Begin body -->
+    <div class="container">
+      <div class="box odd">
+        <div>
+          <div class="header">Box number one</div>
+          <div class="sub">useless subtext</div>
+        </div>
+        <div class="hidden">view the case study</div>
+      </div>
+      <div class="box even">
+        <div>
+          <div class="header">Box number Two</div>
+          <div class="sub">useless subtext</div>
+        </div>
+        <div class="hidden">view the case study</div>
+      </div>
+      <div  class="box odd">
+        <div>
+          <div class="header">Box number three</div>
+          <div class="sub">useless subtext</div>
+        </div>
+        <div class="hidden">view the case study</div>
+      </div>
+      <div class="box even">
+        <div>
+          <div class="header">Box number four</div>
+          <div class="sub">useless subtext</div>
+        </div>
+        <div class="hidden">view the case study</div>
+      </div>
+      <div class="box odd">
+        <div>
+          <div class="header">Box number five</div>
+          <div class="sub">useless subtext</div>
+        </div>
+        <div class="hidden">view the case study</div>
+      </div>
+      <div class="box even">
+        <div>
+          <div class="header">Box number six</div>
+          <div class="sub">useless subtext</div>
+        </div>
+        <div class="hidden">view the case study</div>
+      </div>
+    </div>
+
+    <!-- End Body -->
+    <script src="../src/index.js"></script>
+  </body>
 </html>
