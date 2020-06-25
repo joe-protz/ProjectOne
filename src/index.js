@@ -7,7 +7,6 @@ import addSelectorListeners from './selectors'
 const app = async () => {
   addHeaderListeners()
   addSelectorListeners()
-  
 }
 // Load app
 app()
