@@ -9,6 +9,8 @@
 }
 
 .toggle {
+  outline:none;
+  transition: transform ease-in 0.2s;
   border: none;
   color: white;
   background-color: $primary;
@@ -23,6 +25,8 @@
 
   &.selected {
     color: $primary;
+    transform: scale(1.05);
     background-color: #fdecca;
+  
   }
 }
