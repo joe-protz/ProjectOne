@@ -1,0 +1,28 @@
+@import 'variables.scss';
+
+.selector {
+  font-size: 0;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: fit-content;
+}
+
+.toggle {
+  border: none;
+  color: white;
+  background-color: $primary;
+  font-size: initial;
+  text-transform: uppercase;
+  display: inline;
+  padding: 0.75rem;
+
+  &:hover {
+    transform: scale(1.05);
+  }
+
+  &.selected {
+    color: $primary;
+    background-color: #fdecca;
+  }
+}
