@@ -13,8 +13,9 @@ const buttonArr = [oddButton, evenButton, allButton]
 
 const toggleActive = e => {
   e.target.classList.add('selected')
-  buttonArr.splice(buttonArr.indexOf(e.target), 1)
-  buttonArr.forEach(button => button.classList.remove('selected'))
+  const tmp = [...buttonArr]
+  tmp.splice(buttonArr.indexOf(e.target), 1)
+  tmp.forEach(button => button.classList.remove('selected'))
 }
 
 const allListener = () => {
@@ -38,7 +39,7 @@ const oddListener = () => {
 const evenListener = () => {
   evenButton.addEventListener('click', e => {
     toggleActive(e)
-    for (let i = 0; i < evenArr.length; i++) {
+    for (let i = 0; i < oddArr.length; i++) {
       evenArr[i].classList.remove('hidden')
       oddArr[i].classList.add('hidden')
     }
