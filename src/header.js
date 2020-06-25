@@ -1,15 +1,15 @@
 const links = document.getElementsByTagName('a')
 const linkArr = [...links]
-const addEventListeners = () =>{
-  linkArr.forEach(link =>link.addEventListener('click',()=> {
-    linkArr.forEach((link=> {
-      if(link.classList.contains('active')){
-        link.classList.remove('active')
-      } else{
-        link.classList.add('active')
+const addEventListeners = () => {
+  linkArr.forEach(link => link.addEventListener('click', () => {
+    linkArr.forEach((anchor => {
+      if (anchor.classList.contains('active')) {
+        anchor.classList.remove('active')
+      } else {
+        anchor.classList.add('active')
       }
     }))
-  })
-)}
+  }))
+}
 
 export default addEventListeners
